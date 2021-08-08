@@ -9,15 +9,6 @@ from .forms import EmailPostFrom, CommentFrom, SearchForm
 from taggit.models import Tag
 
 
-"""
-class PostListView(ListView):
-    queryset = Post.published.all() #  or model = Post
-    context_object_name = 'posts'
-    template_name = 'blog/post/list.html'
-    paginate_by = 3
-"""
-
- 
 def post_list(request, tag_slug=None):
     list = Post.published.all()
     tag = None
